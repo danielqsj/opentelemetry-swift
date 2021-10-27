@@ -27,7 +27,7 @@ public class URLSessionInstrumentation {
 
     var configuration: URLSessionInstrumentationConfiguration
 
-    private let queue = DispatchQueue(label: "io.opentelemetry.ddnetworkinstrumentation")
+    private let queue = DispatchQueue(label: "io.opentelemetry.ddnetworkinstrumentation", attributes: .concurrent)
 
     static var instrumentedKey = "io.opentelemetry.instrumentedCall"
 
